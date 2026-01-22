@@ -1,9 +1,9 @@
-sax = [1, 2, 3, 4, 3, 2, 1]
+a = [1, 2, 3, 4, 3, 2, 1]
 
-print(sax)
+print(a)
 def kill_list(input_list):
     set_change = set(input_list)
-    fxxk = list(set_change)
-    print(list(fxxk))
+    b = list(set_change)
+    print(list(b))
 
-kill_list(sax)
+kill_list(b)
