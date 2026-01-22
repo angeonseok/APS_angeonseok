@@ -6,4 +6,4 @@ def kill_list(input_list):
     b = list(set_change)
     print(list(b))
 
-kill_list(b)
+kill_list(a)
