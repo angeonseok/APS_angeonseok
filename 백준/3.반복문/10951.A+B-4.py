@@ -1,5 +1,5 @@
 while 1 :
-    try : 
+    try :
         a, b = map(int, input().split())
         if a == 0 and b == 0 :
             break
@@ -7,3 +7,5 @@ while 1 :
             print(a + b)
     except EOFError :
         break
+
+    #EOFError 예외조건 try~except

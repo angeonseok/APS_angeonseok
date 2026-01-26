@@ -5,7 +5,7 @@ k = max(b)
 total = 0
 
 if k == 0:
-    print(0.0)
+    print(0.0)  #예외조건
 
 else : 
     for x in b :
