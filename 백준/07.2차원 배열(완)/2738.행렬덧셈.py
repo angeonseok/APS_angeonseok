@@ -20,3 +20,7 @@ for j in range(n) :
     j = input().split()
     b.append(j)
 
+for i in range(n) :                 #행렬 합치기
+    for j in range(m):
+        print(int(a[i][j]) + int(b[i][j]), end=" ")
+    print()
