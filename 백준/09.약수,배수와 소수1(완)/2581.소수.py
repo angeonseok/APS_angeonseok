@@ -16,10 +16,6 @@ p = []
 for i in range(m, n+1):
     b.clear()               #매번 초기화해야지
     
-    # if i < 2 :              #1은 나가라
-    #     continue
-    
-    
     for j in range(1,(int(i ** 0.5) + 1)) : #root i 까지만 범위를 줄이자. n까지 다 하면 너무 걸린다
         if i % j == 0 :
             b.append(j)                     #일단 포함을 시키고
