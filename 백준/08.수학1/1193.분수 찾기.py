@@ -10,3 +10,5 @@
 
 x = int(input())
 lst = []
+
+
