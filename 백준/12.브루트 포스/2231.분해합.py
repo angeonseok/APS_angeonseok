@@ -15,8 +15,3 @@ k = list(n)
 
 for _ in range(n) :
     
-
-
-
-    
-
