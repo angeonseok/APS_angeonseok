@@ -10,8 +10,16 @@
 # 첫째 줄에 답을 출력한다. 생성자가 없는 경우에는 0을 출력한다.
 
 n = int(input())
+ans = []
 
-k = list(n)
+for i in range(n) :
+    s = sum(map(int,str(i)))       #숫자를 하나의 문자열로 본다면?
 
-for _ in range(n) :
+    if n == s + i:                 #가장 처음 나온 생성자 바로 출력
+        ans = i
+        break
+    else :
+        ans = 0
+
+print(ans)
     
