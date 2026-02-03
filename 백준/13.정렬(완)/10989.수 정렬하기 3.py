@@ -8,28 +8,26 @@
 import sys
 input = sys.stdin.readline
 
+# def counting_sort(A,B,k) : #원본, 출력, 최댓값
+#     #1. 카운팅
+#     cnts = [0] *(k+1)
+#     for i in range(N):
+#         cnts[A[i]] += 1
+#     #2. 누적
+#     for i in range(1, k+1):   #14568
+#         cnts[i] += cnts[i-1]
+#     #3. 자리배치
+#     for i in range(N-1, -1, -1):
+#         B[cnts[A[i]] - 1] = A[i]
+#         cnts[A[i]] -= 1
 
-# #구글의 힘을 빌렸다...
-# n = int(input())
-# num = [int(input()) for i in range(n)]
 
-# #정렬 수행할 배열 생성. 숫자의 갯수정보도 같이
-# cnt = [0] * (max(num) + 1)
-# for n in num :
-#     cnt[n] += 1
-
-# # 누적합으로 갱신
-# for i in range(1, len(cnt)):
-#     cnt[i] += cnt[i-1]
-
-# #정렬할 리스트와 같은 길이의 리스트 생성. 이 후 작업은 니가 보면서 생각해라
-# result = [0] * (len(num))
-# for k in num:
-#     idx = cnt[k]
-#     result[idx - 1] = k
-#     cnt[k] -= 1
-
+# data = [0, 1, 4, 3, 1, 4, 2, 1]
+# N = len(data)
+# result = [0] * N
+# counting_sort(data, result, max(data)+1)
 # print(result)
+
 
 #문제가 예의가 없네
 import sys
