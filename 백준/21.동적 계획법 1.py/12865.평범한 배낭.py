@@ -9,16 +9,12 @@
 #출력
 # 한 줄에 배낭에 넣을 수 있는 물건들의 가치합의 최댓값을 출력한다.
 
+# swea 4869
 import sys
 input = sys.stdin.readline
 
 n, k = map(int,input().split())
 
-lst = []
-for _ in range(n):
-    wv = list(map(int,input().split()))
-    lst.append(wv)
-
-    
+     
 
 

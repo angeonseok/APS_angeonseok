@@ -12,18 +12,18 @@
 # 입력과는 달리 출력에서는 회전한 모양 사이에만 공백이 존재함에 유의하라.
 # (t는 테스트 케이스의 번호를 의미하며 1부터 시작한다.)
 
+def t_90(arr, n):
+    t_arr = [[] for _ in range(n)]
+    for i in range(n):
+        for j in range(n-1,-1,-1):
+            t_arr[i].append(arr[j][i])
+    return t_arr
+
 T = int(input())
 
 for a in range(1,T+1):
     n = int(input())
     arr = [list(map(int,input().split())) for _ in range(n)]
-
-    def t_90(arr, n):
-        t_arr = [[] for _ in range(n)]
-        for i in range(n):
-            for j in range(n-1,-1,-1):
-                t_arr[i].append(arr[j][i])
-        return t_arr
     
     arr_90 = t_90(arr, n)
     arr_180 = t_90(arr_90, n)
