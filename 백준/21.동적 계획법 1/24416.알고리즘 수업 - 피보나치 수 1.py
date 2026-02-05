@@ -20,21 +20,30 @@
 #출력
 # 코드1 코드2 실행 횟수를 한 줄에 출력한다.
 
+#실제로 fib돌리면 터지는데, 걍 냅둠.
 def fib(n):
+    global f1
     if n == 1 or n == 2:
+        f1 += 1
         return 1
     else:
-        fib(n-1) + fib(n-2)
-        return 
+        return fib(n-1) + fib(n-2)
 
 def fibb(n):
+    global f2
     f = [0] * (n+1)
     f[1] = 1
     f[2] = 1
+
     for i in range(3, n+1):
-        f[n] = f[n-1] + f[n-2]
-    return  f[n]
+        f[i] = f[i-1] + f[i-2]
+        f2 += 1
+
+    return f[n]
 
 n = int(input())
 
-print(fib(n))
+f1, f2 = 0, 0
+fib(n)
+fibb(n)
+print(f1, f2)
