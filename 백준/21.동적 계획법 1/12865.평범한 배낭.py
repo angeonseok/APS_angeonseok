@@ -25,5 +25,4 @@ for w, v in item_list:
     for i in range(k, w -1, -1):
         dp[i] = max(dp[i], dp[i-w] + v)
 
-#답은 k가 결정한다
 print(dp[k])
