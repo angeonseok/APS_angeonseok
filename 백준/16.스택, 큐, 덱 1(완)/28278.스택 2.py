@@ -33,22 +33,22 @@ for _ in range(n):
         stack.append(num[1])
     
     #제일 나중에 들어온 수 제거하면서 출력, 비어있다면 -1
-    if a == 2:
+    elif a == 2:
         if stack:
             print(stack.pop())
         else:
             print(-1)
 
     #스택 내 요소 수
-    if a == 3:
+    elif a == 3:
         print(len(stack))
     
     #스택이 비어있으면 1 아니면 0
-    if a == 4:
+    elif a == 4:
         print(1 if not stack else 0)
     
     #스택에 정수가 있으면 맨 위 정수, 비어있다면 -1
-    if a == 5:
+    elif a == 5:
         if stack:
             print(stack[-1])
         else:

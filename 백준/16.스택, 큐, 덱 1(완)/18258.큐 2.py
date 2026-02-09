@@ -30,28 +30,28 @@ for _ in range(n):
     if a[0] == 'push':
         queue.append(int(a[1]))
     
-    if a[0] == 'pop':
+    elif a[0] == 'pop':
         if queue:
             print(queue.popleft())
         else:
             print(-1)
     
-    if a[0] == 'size':
+    elif a[0] == 'size':
         print(len(queue))
     
-    if a[0] == 'empty':
+    elif a[0] == 'empty':
         if queue:
             print(0)
         else:
             print(1)
 
-    if a[0] == 'front':
+    elif a[0] == 'front':
         if queue:
             print(queue[0])
         else:
             print(-1)
 
-    if a[0] == 'back':
+    elif a[0] == 'back':
         if queue:
             print(queue[-1])
         else:
