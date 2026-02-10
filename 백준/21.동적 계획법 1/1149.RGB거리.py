@@ -17,3 +17,5 @@ input = sys.stdin.readline
 
 n = int(input())
 color_cost = [list(map(int, input().split())) for _ in range(n)]
+
+
