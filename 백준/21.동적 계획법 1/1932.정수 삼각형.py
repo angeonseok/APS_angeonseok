@@ -22,7 +22,7 @@ n = int(input())
 arr = [list(map(int, input().split())) for _ in range(n)]
 
 #합의 최댓값을 계산한 배열 생성할 예정
-tri = [[0] * n for _ in range(n)]
+tri = [[0] * (i + 1) for i in range(n)]
 tri[0][0] = arr[0][0]
 
 for i in range(1, n):
