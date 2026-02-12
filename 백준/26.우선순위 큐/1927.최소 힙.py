@@ -25,6 +25,6 @@ for _ in range(n):
         heapq.heappush(heap, x)
     else:
         if heap:
-            print(heapq.heappop(heap))  #최솟값나옴
+            print(heapq.heappop(heap))  #최소값나옴
         else:
             print(0)

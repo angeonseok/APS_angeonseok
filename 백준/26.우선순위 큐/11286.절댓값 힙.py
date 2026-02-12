@@ -11,3 +11,22 @@
 입력에서 0이 주어진 회수만큼 답을 출력한다. 만약 배열이 비어 있는 경우인데 절댓값이 가장 작은 값을 출력하라고 한 경우에는 0을 출력하면 된다.
 """
 
+import sys
+import heapq
+input = sys.stdin.readline
+
+n = int(input())
+heap=[]
+
+for _ in range(n):
+    x = int(input())
+    
+    #절댓값기준 정렬
+    if x != 0:
+       heapq.heappush(heap, (abs(x), x))
+    else:
+        if heap:
+            abs_num, num = heapq.heappop(heap)  #이래 꺼내는거 맞나
+            print(num)
+        else:
+            print(0)

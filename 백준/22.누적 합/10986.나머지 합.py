@@ -15,12 +15,4 @@ import sys
 sys.stdin = open('input.txt', 'r')
 
 n, m = map(int, input().split())
-temp = list(map(int, input().split()))
-
-print(temp)
-
-perfix = [0] * (n + 1)
-for i in range(1, n + 1):
-    perfix[i] = perfix[i-1] + temp[i-1]
-
-print(perfix)
+temp = [0] + list(map(int, input().split()))
