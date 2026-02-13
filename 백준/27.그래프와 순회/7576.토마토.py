@@ -38,7 +38,7 @@ else:
             nx,ny = x + dir[0], y + dir[1]
             if 0 <= nx < n and 0 <= ny < m and room[nx][ny] == 0:
                 room[nx][ny] = 1
-                visited[nx][ny] = visited[x][y] + 1  #전파하듯이
+                visited[nx][ny] = visited[x][y] + 1  #전파
                 q.append((nx,ny))
 
     #작업 이후 모든 토마토가 익으면
