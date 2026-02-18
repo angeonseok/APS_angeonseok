@@ -10,8 +10,6 @@ i번째 돌을 사이에 두고 마주보는 j개의 돌에 대해, 각각 같�
 #출력
 #과 게임번호, 빈칸에 이어 빈칸으로 구분된 돌의 상태를 출력한다.
 """
-import sys
-sys.stdin = open('input.txt', 'r')
 
 T = int(input())
 for tc in range(1, T+1):

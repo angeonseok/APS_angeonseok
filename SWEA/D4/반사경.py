@@ -29,7 +29,7 @@ for tc in range(1, T+1):
     cnt = 0
     visited = set()
 
-    #출발지로 오면 종료
+    #출발과 같은 상태로 출발지에 오면 종료
     while True:
         state = (x, y, dx, dy)
         if state in visited:

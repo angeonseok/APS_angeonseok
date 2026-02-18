@@ -29,18 +29,18 @@ for tc in range(1, T+1):
 
         for i in range(n):
             if i % 2 == 0:
-                ans.append(a.popleft(0))
+                ans.append(a.popleft())
             else:
-                ans.append(b.popleft(0))
+                ans.append(b.popleft())
             
     else:
-        a = deck[:(n + 1) // 2]
-        b = deck[(n + 1) // 2:]
+        a = deque(deck[:(n + 1) // 2])
+        b = deque(deck[(n + 1) // 2:])
 
         for i in range(n):
             if i % 2 == 0:
-                ans.append(a.popleft(0))
+                ans.append(a.popleft())
             else:
-                ans.append(b.popleft(0))
+                ans.append(b.popleft())
     
     print(f'#{tc}', *ans)

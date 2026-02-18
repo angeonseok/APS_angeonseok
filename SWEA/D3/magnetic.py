@@ -27,8 +27,6 @@ F의 경우 각각 다른 교착상태로 판단하여 2개의 교착상태로 �
 #출력
 #부호와 함께 테스트 케이스의 번호를 출력하고, 공백 문자 후 교착 상태의 개수를 출력한다.
 """
-import sys
-sys.stdin = open('input.txt', 'r')
 
 for tc in range(1,11):
     n = int(input())

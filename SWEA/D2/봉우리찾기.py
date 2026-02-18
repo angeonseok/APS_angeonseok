@@ -12,9 +12,6 @@ N개의 지형이 주어질 때 봉우리의 수를 출력하시오.
 - ‘#’ 과 테스트 케이스 번호를 출력하고 봉우리의 수를 출력한다.
 """
 
-import sys
-sys.stdin = open('input.txt', 'r')
-
 T = int(input())
 for tc in range(1, T+1):
     n = int(input())

@@ -43,6 +43,3 @@ for tc in range(1, T+1):
                 ans = cnt
 
     print(f'#{tc} {ans}')
-
-            
-

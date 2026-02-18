@@ -17,8 +17,34 @@ sys.stdin = open('input.txt', 'r')
 
 T = int(input())
 
-for tc in range(T):
+for tc in range(1, T+1):
     n = int(input())
     arr = [list(map(int,input().split())) for _ in range(n)]
 
+    #미리 높이비용 계산
+    rc = [[0] * 6 for _ in range(n)]
+    cc = [[0] * 6 for _ in range(n)]
+
+    for i in range(n):
+        for j in range(n):
+            for k in range(1, 6):
+                d = abs(arr[i][j] - k)
+                rc[i][k] += d
+                cc[j][k] += d
     
+    ans_cost = 5 * n ** 2 + 1
+    ans_h = 6
+
+    #높이 계산해둔 값을 활용
+    for x in range(n):
+        for y in range(n):
+            for z in range(1,6):
+                #중복된 칸 빼주고
+                s = rc[x][z] + cc[y][z] - abs(arr[x][y] - z) 
+
+                #바뀌는 조건 따라서 설정
+                if s < ans_cost or (s == ans_cost and z < ans_h):
+                    ans_cost = s
+                    ans_h = z
+
+    print(f'#{tc} {ans_cost} {ans_h}')
