@@ -32,7 +32,7 @@ def bfs(start_x, start_y, status):
         for dir in ((0,1),(1,0),(0,-1),(-1,0)):
             nx,ny = x + dir[0], y + dir[1]
 
-            #여기까지는 정상적인 bfs
+            #여기까지는 익히 맛보던 bfs
             if 0 <= nx < n and 0 <= ny < m:
                 if maze[nx][ny] == 0 and visited[nx][ny][status] == 0:
                     visited[nx][ny][status] = visited[x][y][status] + 1
