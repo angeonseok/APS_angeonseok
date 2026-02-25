@@ -9,4 +9,6 @@ C개의 공유기를 N개의 집에 적당히 설치해서, 가장 인접한 두
 #출력
 첫째 줄에 가장 인접한 두 공유기 사이의 최대 거리를 출력한다.
 """
-
+import sys
+# input = sys.stdin.readline
+sys.stdin = open('input.txt')

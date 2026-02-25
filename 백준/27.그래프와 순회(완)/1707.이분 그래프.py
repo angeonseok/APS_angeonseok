@@ -12,7 +12,6 @@ K개의 줄에 걸쳐 입력으로 주어진 그래프가 이분 그래프이면
 import sys
 from collections import deque
 input = sys.stdin.readline
-# sys.stdin = open('input.txt')
 
 k = int(input())
 for _ in range(k):

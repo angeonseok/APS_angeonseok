@@ -15,4 +15,10 @@ sys.stdin = open('input.txt')
 n,s = map(int, input().split())
 arr = list(map(int, input().split()))
 
-i, j = 0, 0
+i, j = 0, 1
+
+cnt = 2
+l = 0
+
+while i < j:
+    
