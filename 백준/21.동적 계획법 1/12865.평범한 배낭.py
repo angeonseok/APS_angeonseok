@@ -22,7 +22,7 @@ dp = [0] * (k + 1)
 
 #딱 맞게 넣거나, 이전 결과 + 무게 한도 안걸리는 놈 추가
 for w, v in item_list:
-    for i in range(k, w -1, -1):
+    for i in range(k, w - 1, -1):
         dp[i] = max(dp[i], dp[i-w] + v)
 
 print(dp[k])
