@@ -19,6 +19,4 @@ x, y = map(int,input().split())
 B = [list(map(int,input().split())) for _ in range(x)]
 
 ans = [[0] * n for _ in range(y)]
-for i in range(n):
-    for j in range(y):
-        ans[i][j] = A[i][j] * B[j][i]
+
