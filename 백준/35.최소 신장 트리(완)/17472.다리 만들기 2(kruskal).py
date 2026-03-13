@@ -103,7 +103,6 @@ def clean(edges):
 
 
 #3.모든 섬을 최소비용으로 연결하자
-#3-1. 크루스칼
 def kruskal(v, edges):
     parent = list(range(v+1))
     rank = [0] * (v+1)

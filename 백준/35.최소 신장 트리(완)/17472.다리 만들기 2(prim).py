@@ -71,7 +71,6 @@ def e_to_g(edges):
         if (a, b) not in e_dict or w < e_dict[(a, b)]:
             e_dict[(a, b)] = w
     
-    l = len(edges)
     graph = [[] for _ in range(i_cnt + 2)]
     for (a, b), w in e_dict.items():
         graph[a].append((w, b))
