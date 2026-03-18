@@ -19,7 +19,7 @@ for tc in range(1, T + 1):
     cnt = 0
     while a <= n and b <= n:
 
-        #둘 중 큰 놈을 작은 놈에 더해(그리디임)
+        #둘 중 큰 놈을 작은 놈에 계속 더해
         if a > b:
             b += a
         else:
