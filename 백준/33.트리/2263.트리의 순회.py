@@ -11,4 +11,7 @@ n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가
 import sys
 input = sys.stdin.readline
 
-for d
+n = int(input())
+inorder = list(map(int, input().split()))
+postorder = list(map(int, input().split()))
+
