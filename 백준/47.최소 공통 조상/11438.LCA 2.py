@@ -19,6 +19,7 @@ def bfs(root, graph, N):
     depth[root] = 0
     q = deque([root])
 
+    #depth와 노드의 부모를 각각 저장
     while q:
         node = q.popleft()
         for nxt in graph[node]:
@@ -29,6 +30,7 @@ def bfs(root, graph, N):
 
     return depth, parent
 
+#depth를 맞춘 후, 같이 올라가면서 공통 조상 찾기
 def lca(u, v, depth, parent):
     while depth[u] > depth[v]:
         u = parent[u]
