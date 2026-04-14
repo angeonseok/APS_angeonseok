@@ -5,4 +5,58 @@
 배열의 초기값과 수행할 함수가 주어졌을 때, 최종 결과를 구하는 프로그램을 작성하시오.
 
 #입력
+첫째 줄에 테스트 케이스의 개수 T가 주어진다. T는 최대 100이다.
+각 테스트 케이스의 첫째 줄에는 수행할 함수 p가 주어진다. p의 길이는 1보다 크거나 같고, 100,000보다 작거나 같다.
+다음 줄에는 배열에 들어있는 수의 개수 n이 주어진다. (0 ≤ n ≤ 100,000)
+다음 줄에는 [x1,...,xn]과 같은 형태로 배열에 들어있는 정수가 주어진다. (1 ≤ xi ≤ 100)
+전체 테스트 케이스에 주어지는 p의 길이의 합과 n의 합은 70만을 넘지 않는다.
+
+#출력
+각 테스트 케이스에 대해서, 입력으로 주어진 정수 배열에 함수를 수행한 결과를 출력한다. 만약, 에러가 발생한 경우에는 error를 출력한다.
 """
+
+import sys
+from collections import deque
+input = sys.stdin.readline
+
+T = int(input())
+for _ in range(T):
+    p = input().rstrip()
+    n = int(input())
+    
+    #대괄호만 벗겨 받기
+    arr = input().strip()[1:-1]
+
+    #빈 배열인지 아닌지 나눠서 변환
+    if len(arr) == 0:
+        q = deque()
+    else:
+        q = deque(map(int, arr.split(',')))
+
+    #reverse를 직접하면 터질 것 같아서 xor로 관리
+    r = 0
+
+    #에러나면 마지막 출력 스킵
+    flag = False
+
+    for cmd in p:
+        if cmd == "R":
+            r ^= 1
+        
+        else:
+            if len(q) == 0:
+                print('error')
+                flag = True
+                break
+
+            else:
+                if r == 0:
+                    q.popleft()
+                else:
+                    q.pop()
+
+    if not flag:
+        if r == 1:
+            q.reverse()
+
+        print('[' + ','.join(map(str, q)) + ']')
