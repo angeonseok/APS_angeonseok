@@ -39,9 +39,6 @@ K 번 자석을 회전시킨 후 획득하는 점수의 총 합을 출력하는 
 정답은 모든 자석의 회전이 끝난 후 획득한 점수의 총 합이다.
 """
 
-import sys
-input = sys.stdin.readline
-
 T = int(input())
 for tc in range(1, T + 1):
     K = int(input())

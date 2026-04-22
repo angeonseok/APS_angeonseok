@@ -50,7 +50,7 @@ def check():
 
 
 #2. 약품 투여를 한다.
-def injcet(row, cnt):
+def inject(row, cnt):
     global ans
 
     #가지치기    
@@ -66,15 +66,15 @@ def injcet(row, cnt):
     cur_row = arr[row][:]
 
     #1. 걍 간다
-    injcet(row+1, cnt)
+    inject(row+1, cnt)
 
     #2. A 투여한다
     arr[row] = [0] * w
-    injcet(row+1, cnt+1)
+    inject(row+1, cnt+1)
 
     #3. B 투여한다
     arr[row] = [1] * w
-    injcet(row+1, cnt+1)
+    inject(row+1, cnt+1)
 
     arr[row] = cur_row 
 
@@ -90,6 +90,6 @@ for tc in range(1, T + 1):
         ans = 0
     
     else:
-        injcet(0,0)
+        inject(0,0)
 
     print(f"#{tc} {ans}")

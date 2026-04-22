@@ -59,9 +59,6 @@
 출력해야 할 정답은 지갑을 두고 간 고객과 같은 접수 창구 A와 같은 정비 창구 B를 이용한 고객들의 고객번호의 합이다. 만약 그런 고객이 없는 경우 정답으로 -1을 출력한다.
 """
 
-import sys
-input = sys.stdin.readline
-
 T = int(input())
 for tc in range(1, T + 1):
     N, M, K, A, B = map(int, input().split())
