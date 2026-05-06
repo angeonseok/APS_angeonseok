@@ -21,6 +21,7 @@ M은 친한 친구 관계의 수 이다.
 *상원이의 친구가 없을 수도 있다는 점에 유의해야 한다. 그리고 상원이는 초대장을 받는 사람에 속하지 않는다.
 """
 
+#기본적인 bfs. 이게 왜 D5?
 from collections import deque
 
 T = int(input())
@@ -28,8 +29,29 @@ for tc in range(1, T+1):
     n, m = map(int, input().split())
 
     graph = [[] for _ in  range(n+1)]
-
+    
     for _ in range(m):
         a, b = map(int, input().split())
         graph[a].append(b)
         graph[b].append(a)
+
+    visited = [-1] * (n+1)
+
+    q = deque([1])
+    visited[1] = 0
+    
+    ans = 0
+    while q:
+        now = q.popleft()
+
+        #친구의 친구까지만 따질 예정
+        if visited[now] == 2:
+            continue
+
+        for nxt in graph[now]:
+            if visited[nxt] == -1:
+                visited[nxt] = visited[now] + 1
+                q.append(nxt)
+                ans += 1
+    
+    print(f"#{tc} {ans}")
